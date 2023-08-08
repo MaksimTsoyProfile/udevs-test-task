@@ -4,15 +4,16 @@ import NewsHistory from '@/containers/NewsHistory';
 import Footer from '@/containers/Footer';
 import { withIronSessionSsr } from 'iron-session/next';
 import { sessionOptions } from '../../sessionOptions';
+import WeatherContent from '@/containers/WeatherContent';
 
-export default function Home({
+const Weather = ({
   token,
-}) {
+}) => {
   return (
     <>
-      <Header token={token} currentTab='news' />
+      <Header token={token} currentTab='weather' />
       <Wrapper>
-        <NewsHistory />
+        <WeatherContent />
       </Wrapper>
       <Footer />
     </>
@@ -29,3 +30,5 @@ const getServerSideCb = async ({ locale, req, res}) => {
 };
 
 export const getServerSideProps = withIronSessionSsr(getServerSideCb, sessionOptions);
+
+export default Weather;

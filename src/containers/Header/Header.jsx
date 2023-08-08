@@ -8,7 +8,10 @@ import logout from '@/pages/api/logout';
 import { logOut } from '@/backendApi';
 import { useRouter } from 'next/router';
 
-const Header = ({ token }) => {
+const Header = ({
+  token,
+  currentTab,
+}) => {
   const [activeLink, setActiveLink] = useState(1);
   const { replace } = useRouter();
   const [openEntry, setOpenEntry] = useState(false);
@@ -16,14 +19,21 @@ const Header = ({ token }) => {
     {
       id: 1,
       title: 'Новости',
+      alias: 'news',
       href: '/'
     },
     {
       id: 2,
+      alias: 'weather',
       title: 'Погода',
-      href: '/'
+      href: '/weather'
     },
   ], []);
+  const currentRouteByTab = {
+    news: '/',
+    weather: '/weather',
+  };
+  const replaceRoute = currentRouteByTab[currentTab];
   
   const handleActivateLink = useCallback((id) => () => {
     setActiveLink(id);
@@ -39,7 +49,7 @@ const Header = ({ token }) => {
   
   const handleLogOut = useCallback(async () => {
     await logOut();
-    replace('/');
+    replace(replaceRoute);
   }, [replace]);
   
   const getAvaById = useCallback((id) => {
@@ -69,7 +79,7 @@ const Header = ({ token }) => {
                   <CustomLink
                     href={link.href}
                     title={link.title}
-                    active={link.id === activeLink}
+                    active={link.alias === currentTab}
                     onClick={handleActivateLink(link.id)}
                   />
                 </div>
@@ -92,6 +102,7 @@ const Header = ({ token }) => {
               )
           }
           <EntryModal
+            replaceRoute={replaceRoute}
             open={openEntry}
             onClose={handleCloseEntryDialog}
           />

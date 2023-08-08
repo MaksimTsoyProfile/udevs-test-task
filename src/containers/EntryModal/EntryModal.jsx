@@ -9,6 +9,7 @@ import { useRouter } from 'next/router';
 const EntryModal = ({
   open,
   onClose,
+  replaceRoute,
 }) => {
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState('');
@@ -17,7 +18,7 @@ const EntryModal = ({
   const handleSubmit = useCallback(async (e) => {
     e.preventDefault();
     await logIn(avatar);
-    replace('/');
+    replace(replaceRoute);
     setName('');
     setAvatar('');
     onClose();

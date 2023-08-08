@@ -1,0 +1,202 @@
+.weather {
+  position: relative;
+  padding: 130px 0 0 0;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.weatherContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 80vh;
+  background-image: url("/sun.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
+}
+
+.weatherDetail {
+  margin: 0 40px;
+  padding: 20px 0;
+  border-top: 2px solid white;
+  @media (max-width: 576px) {
+    margin: 0 10px;
+  }
+  h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    @media (max-width: 576px) {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+  }
+  .detailItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    @media (max-width: 576px) {
+      padding: 3px 0;
+    }
+  }
+}
+
+.dataContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: auto;
+  align-items: center;
+  color: white;
+  padding: 0 40px;
+  margin-bottom: 40px;
+  max-width: 70%;
+  @media (max-width: 768px) {
+    max-width: 50%;
+  }
+  @media (max-width: 576px) {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .temperature {
+    font-size: 12rem;
+    margin-right: 20px;
+    @media (max-width: 1200px) {
+      font-size: 10rem;
+    }
+    @media (max-width: 992px) {
+      font-size: 8rem;
+    }
+    @media (max-width: 576px) {
+      font-size: 3rem;
+    }
+  }
+  .info {
+    margin-right: 20px;
+  }
+  .cityInfo {
+    font-size: 5.5rem;
+    @media (max-width: 1200px) {
+      font-size: 4rem;
+    }
+    @media (max-width: 992px) {
+      font-size: 3rem;
+    }
+    @media (max-width: 576px) {
+      font-size: 1.5rem;
+    }
+  }
+  .dateInfo {
+    font-size: 1.4rem;
+    @media (max-width: 1200px) {
+      font-size: 1rem;
+    }
+  }
+  .iconWeather {
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 1200px) {
+      font-size: 1rem;
+    }
+  }
+  .icon {
+    width: 60px;
+  }
+  .icon img {
+    width: 100%;
+  }
+}
+
+.leftForm {
+  color: white;
+  background: rgba(87, 87, 119, 0.5);
+  backdrop-filter: blur(10px);
+  width: 30%;
+  height: 100%;
+  @media (max-width: 768px) {
+    width: 50%;
+  }
+  @media (max-width: 576px) {
+    width: 100%;
+  }
+}
+
+.form {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+  padding: 40px;
+  @media (max-width: 576px) {
+    padding: 10px;
+  }
+}
+
+.searchInput {
+  display: flex;
+  width: 70%;
+  background: transparent;
+  box-sizing: border-box;
+  font-size: 24px;
+  padding: 12px 0;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid lighten(#AEBEC9, 10%);
+  color: white;
+  @media (max-width: 576px) {
+    font-size: 16px;
+  }
+
+  &::placeholder {
+    color: lighten(#AEBEC9, 10%)
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.loop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #8C9196;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  padding: 16px;
+  @media (max-width: 576px) {
+    padding: 6px;
+    width: 60px;
+  }
+}
+
+.loop img {
+  width: 100%;
+}
+
+.cities {
+  padding: 0 40px;
+  height: 300px;
+  overflow: scroll;
+  @media (max-width: 576px) {
+    height: 200px;
+    padding: 0 10px;
+  }
+}
+
+.city {
+  cursor: pointer;
+  padding: 14px 0;
+  font-size: 18px;
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
+}
