@@ -1,0 +1,82 @@
+.footer {
+  background: #FAFAFC;
+}
+
+.footerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  gap: 10%;
+}
+
+.logoBlock {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 25%;
+  @media (max-width: 576px) {
+    width: 100%;
+  }
+  .img img {
+    width: 100px;
+  }
+  .text {
+    color: #1E2833;
+    margin: 20px 0;
+    font-size: 14px;
+    @media (max-width: 576px) {
+      margin: 10px 0;
+    }
+  }
+}
+
+.resources {
+  width: 15%;
+  @media (max-width: 576px) {
+    font-size: 12px;
+    width: 20%;
+  }
+}
+
+.about {
+  width: 15%;
+  @media (max-width: 576px) {
+    font-size: 12px;
+    width: 20%;
+  }
+}
+
+.help {
+  width: 15%;
+  @media (max-width: 576px) {
+    font-size: 12px;
+    width: 20%;
+  }
+}
+
+.blockTitle {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.blockItem {
+  margin-bottom: 15px;
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+  @media (max-width: 576px) {
+    margin-bottom: 5px;
+  }
+}
+
+.copyRight {
+  padding: 40px 0;
+  font-size: 14px;
+  color: #8C9196;
+  @media (max-width: 768px) {
+    padding: 20px 0;
+  }
+  @media (max-width: 576px) {
+    padding: 10px 0;
+  }
+}

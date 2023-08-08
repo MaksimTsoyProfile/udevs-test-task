@@ -1,0 +1,12 @@
+.modal {
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 1em 2em;
+  &Header {
+    width: 100%;
+    margin-bottom: .8em;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+  }
+}

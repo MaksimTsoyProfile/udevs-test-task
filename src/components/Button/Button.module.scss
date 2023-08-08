@@ -1,0 +1,26 @@
+.button {
+  display: flex;
+  align-items: center;
+  background: #1B5BF7;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 16px;
+  color: white;
+  @media (max-width: 576px) {
+    padding: 4px 8px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+.fullwidth {
+  width: 100%;
+  justify-content: center;
+}

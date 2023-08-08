@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: Roboto;
+}
+
+.popup-content {
+  margin: auto;
+  border-radius: 8px;
+  background: rgb(255, 255, 255);
+  width: 30%;
+  padding: 5px;
+  @media (max-width: 992px) {
+    width: 60%;
+  }
+  @media (max-width: 576px) {
+    width: 80%;
+  }
+}
+
+.popup-overlay {
+  background-color: rgba(34, 34, 34, .7);
+}

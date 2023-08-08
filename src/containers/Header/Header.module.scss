@@ -1,0 +1,59 @@
+.header {
+  background: #FAFAFC;
+  position: fixed;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 15px;
+  @media (max-width:576px) {
+    padding: 0 5px;
+  }
+}
+
+.avatarContainer {
+  display: flex;
+}
+
+.avatar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50px;
+  margin-right: 20px;
+  @media (max-width: 576px) {
+    margin-right: 10px;
+    width: 40px;
+  }
+}
+
+.avatar img {
+  width: 100%;
+}
+
+.headerContainer {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.link {
+  margin-left: 10px;
+}
+
+.logo {
+  width: 120px;
+  @media (max-width: 576px) {
+    width: 80px;
+  }
+}
+
+.logo img {
+  width: 100%;
+}

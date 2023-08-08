@@ -1,0 +1,13 @@
+.info {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  color: #AEBEC9;
+  .divider {
+    margin: 0 10px;
+  }
+  img {
+    width: 14px;
+    margin-right: 4px;
+  }
+}
